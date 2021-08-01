@@ -1,5 +1,5 @@
-# Adding a Secure Page
-To test our login feature, we need to make sure that only logged in users can see the Accounts Page. To start, lets create a model called Account.
+# Securing Views with Authorize
+To test our authentication, we need to make sure that only logged in users can see the Accounts Page. To start, lets create a model called Account.
 
 ```csharp
 using System;
