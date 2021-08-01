@@ -50,3 +50,25 @@ dotnet ef database update
 ```
 
 A new table called Account will now be setup on your database. Start up the app and go to the following page - https://localhost:5001/Accounts. You should notice that we were able to see this page without actually being logged in. This is something we need to fix. 
+
+Open the AccountsController and add the following to the code:
+
+```csharp
+//Other dependencies above ....
+using Microsoft.AspNetCore.Authorization;
+
+namespace MVCAuthExample.Controllers
+{
+    [Authorize]
+    public class AccountsController : Controller
+    ...
+
+```
+
+The Authorize Attribute by default will only allow authenticated users to see the page. Run the application and lets test it out.
+
+```shell
+dotnet run
+```
+
+Go to the https://localhost:5001/Accounts page and see what happens. It should redirect you to the login page. This is the correct behaviour we are looking for. Login using your credentails and then try again. It should now render. 
