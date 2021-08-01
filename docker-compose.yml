@@ -1,0 +1,19 @@
+version: "3.2"
+services:
+    mvcapp:
+        container_name: mvc-auth-app
+        build: .
+        ports: 
+            - "8001:5001"
+        depends_on:
+            - mssqldb
+    mssqldb:
+        container_name: sql-server-db
+        build: mssql/.
+        ports: 
+            - "1433:1433"
+        environment:
+            MSSQL_PID: "Developer"
+            MSSQL_USER: "SA"
+            MSSQL_SA_PASSWORD: "MyPass@word"  
+            ACCEPT_EULA: "Y"   
