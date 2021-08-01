@@ -21,15 +21,15 @@ dotnet run
 Go to where the app has been started, by default its usually https://localhost:5001
 
 #### Login Page
-![Login Page](./imgs/login.png)
+![Login Page](../imgs/login.png)
 
 ### Register Page
-![Register Page](./imgs/register.png)
+![Register Page](../imgs/register.png)
 
 ### Forgot Password Page
-![Forgot Password](./imgs/forgot.png)
+![Forgot Password](../imgs/forgot.png)
 
 ### Resend Email
-![Resent Email](./imgs/resend_email.png)
+![Resent Email](../imgs/resend_email.png)
 
 
