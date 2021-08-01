@@ -90,3 +90,9 @@ In Views/Shared create a new partial called <strong>_AuthLinks.cshtml</strong> a
 ```
 
 Start the application and notice that you dont see the Accounts link on the navbar. Login in using your credentials and notice that the Accounts link now appears. The SignInManger.IsSignedIn(User) verfies that a user is signed in and if this condition is not met, the link will not show in the UI. 
+
+#### Not Logged In
+![Not Logged In](../imgs/not_loggedin.png)
+
+#### Logged In
+![Logged In](../imgs/loggedin.png)
