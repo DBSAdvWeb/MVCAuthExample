@@ -71,4 +71,22 @@ The Authorize Attribute by default will only allow authenticated users to see th
 dotnet run
 ```
 
-Go to the https://localhost:5001/Accounts page and see what happens. It should redirect you to the login page. This is the correct behaviour we are looking for. Login using your credentails and then try again. It should now render. 
+Go to the https://localhost:5001/Accounts page and see what happens. It should redirect you to the login page. This is the correct behaviour we are looking for. Login using your credentails and then try again. It should now render. Lets improve this slightly by adding an Accounts link that will only render when the user has authenticated. 
+
+
+In Views/Shared create a new partial called <strong>_AuthLinks.cshtml</strong> and add the following code:
+
+```csharp
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@if (SignInManager.IsSignedIn(User))
+{
+ <li class="nav-item">
+    <a class="nav-link text-dark" asp-area="" asp-controller="Accounts" asp-action="Index">Accounts</a>
+ </li>   
+}
+```
+
+Start the application and notice that you dont see the Accounts link on the navbar. Login in using your credentials and notice that the Accounts link now appears. The SignInManger.IsSignedIn(User) verfies that a user is signed in and if this condition is not met, the link will not show in the UI. 
