@@ -44,7 +44,9 @@ You shoul now have a new Controller & Views setup for the Accounts view. Next, w
 ```shell
 dotnet ef migrations add CreateAccount
 ```
-and then update our database
+
 ```shell
 dotnet ef database update
 ```
+
+A new table called Account will now be setup on your database. Start up the app and go to the following page - https://localhost:5001/Accounts. You should notice that we were able to see this page without actually being logged in. This is something we need to fix. 

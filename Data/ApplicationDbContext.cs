@@ -12,5 +12,6 @@ namespace MVCAuthExample.Data
             : base(options)
         {
         }
+        public DbSet<MVCAuthExample.Models.Account> Account { get; set; }
     }
 }
