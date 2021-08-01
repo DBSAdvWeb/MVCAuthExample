@@ -58,7 +58,7 @@ Open up your database - in my case I am using Azure Studio and check that the da
 
 ![Identify Tables Created](../imgs/scaffold_identity.png)
 
-You should see a seven (eight including the EFMigrationsHistory table) new tables all starting with AspNet*. 
+You should see seven (eight including the EFMigrationsHistory table) new tables all starting with AspNet*. 
 
 We can now test and see if the Identity is setup and working from our MVC UI. Start the app by running the following:
 
@@ -85,7 +85,7 @@ select * from AspNetUsers;
 
 ![Created User](../imgs/db_created_user.png)
 
-You can now see that a user has been created. 
+You can now see that a user has been created along with your email you entered upon registering. You password is also encryped and not stored as plain text. 
 
 
 
